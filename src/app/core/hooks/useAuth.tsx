@@ -33,7 +33,9 @@ export const useAuth = (): AuthContextType => {
       }
       return false;
     }).catch((error) => {
-      throw new Error('Login failed: ' + error);
+      console.log(error);
+
+      throw new Error('Login failed');
     });
     return response;
   }
@@ -49,7 +51,8 @@ export const useAuth = (): AuthContextType => {
       }
       return false;
     }).catch((error) => {
-      throw new Error('Login failed: ' + error);
+      console.log(error);
+      throw new Error('Can not create new account: ');
     });
     return response;
   }

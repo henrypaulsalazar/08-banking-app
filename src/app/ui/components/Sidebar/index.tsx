@@ -27,11 +27,7 @@ export const Sidebar: FC<SidebarProps> = ({ onActionChange, currentAction, compo
           </li>
         ))}
       </ul>
-
-      {/* Espaciador para separar las acciones del botón de logout */}
       <div className="sidebar__spacer"></div>
-
-      {/* Botón de cerrar sesión */}
       <button className="sidebar__logout-btn" onClick={onLogout}>
         Cerrar sesión
       </button>

@@ -46,32 +46,3 @@ export async function decryptAES(encryptedText: string) {
 
     return new TextDecoder().decode(desencriptadoBuffer);
 }
-
-/*async function convertirYEncriptarObjeto(objeto) {
-    const llaveSimetrica = "banc0S3gur1d4d!@";
-    const vectorInicializacion = "AESInitVector@16";
-
-    const cuentaOrigenEncriptada = await encriptarAES(objeto.cuentaOrigen, llaveSimetrica, vectorInicializacion);
-    const cuentaDestinoEncriptada = await encriptarAES(objeto.cuentaDestino, llaveSimetrica, vectorInicializacion);
-    const customerEncriptado = await encriptarAES(objeto.customer, llaveSimetrica, vectorInicializacion);
-
-    const objetoEncriptado = {
-        cuentaOrigen: cuentaOrigenEncriptada,
-        cuentaDestino: cuentaDestinoEncriptada,
-        monto: objeto.monto,
-        customer: customerEncriptado
-    };
-
-    console.log(JSON.stringify(objetoEncriptado, null, 2));
-}
-
-
-const objetoOriginal = {
-  cuentaOrigen: 111111111,
-  cuentaDestino:222222222,
-  monto: 10.0,
-  customer: "yoder"
-};
-
-convertirYEncriptarObjeto(objetoOriginal);
-*/

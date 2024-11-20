@@ -18,9 +18,11 @@ export default function HomeContainer() {
   return (
     <LayoutMain>
       <DashBoard Sidebar={<Sidebar onActionChange={handleActionChange} currentAction={currentAction} componentActions={userComponentActions} onLogout={logoutFunction} />}>
-        <h2>Hola {username}</h2>
-        <p>Número de Cuenta:{accountNumber}</p>
-        <p>{balance > 0 ? `Saldo: $${balance}` : '-'}</p>
+          <h2>Hola {username}</h2>
+        <div className="account__info">
+          <p>Número de Cuenta: {accountNumber}</p>
+          <p>{balance > 0 ? `Saldo: $${balance}` : '-'}</p>
+        </div>
         {
           userComponentActions.map((item) => (
             <div key={item.action}>
